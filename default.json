@@ -11,6 +11,8 @@
     ":combinePatchMinorReleases",
     ":semanticCommitTypeAll(chore)",
     ":label(dependencies)",
+    "group:monorepos",
+    "group:githubArtifactActions",
     "github>muhlba91/renovate-config:automerge(digest)"
   ],
   "assignAutomerge": true,
@@ -22,13 +24,25 @@
   "packageRules": [
     {
       "matchUpdateTypes": [
-        "patch",
-        "digest"
+        "patch"
       ],
       "labels": [
         "dependencies",
         "renovate-patch"
-      ]
+      ],
+      "groupName": "all patch updates",
+      "groupSlug": "renovate-patch"
+    },
+    {
+      "matchUpdateTypes": [
+        "digest"
+      ],
+      "labels": [
+        "dependencies",
+        "renovate-digest"
+      ],
+      "groupName": "all digest updates",
+      "groupSlug": "renovate-digest"
     },
     {
       "matchUpdateTypes": [
@@ -47,6 +61,22 @@
         "dependencies",
         "renovate-major"
       ]
+    },
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "digest"
+      ],
+      "matchManagers": [
+        "github-actions"
+      ],
+      "labels": [
+        "dependencies",
+        "renovate-github-actions"
+      ],
+      "groupName": "all github-actions updates",
+      "groupSlug": "renovate-github-actions"
     }
   ]
 }
