@@ -29,9 +29,7 @@
       "labels": [
         "dependencies",
         "renovate-patch"
-      ],
-      "groupName": "all patch updates",
-      "groupSlug": "renovate-patch"
+      ]
     },
     {
       "matchUpdateTypes": [
@@ -40,9 +38,7 @@
       "labels": [
         "dependencies",
         "renovate-digest"
-      ],
-      "groupName": "all digest updates",
-      "groupSlug": "renovate-digest"
+      ]
     },
     {
       "matchUpdateTypes": [
