@@ -4,5 +4,9 @@
         "github>muhlba91/renovate-config",
         "github>muhlba91/renovate-config:automerge(minor)",
         "github>muhlba91/renovate-config:automerge(major)"
+    ],
+    "enabledManagers": [
+        "github-actions",
+        "pre-commit"
     ]
 }
