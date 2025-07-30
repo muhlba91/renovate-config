@@ -1,0 +1,71 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "helpers:pinGitHubActionDigests",
+    ":dependencyDashboard",
+    ":semanticCommitTypeAll(chore)",
+    ":github>muhlba91/renovate-config:automerge(patch)",
+    ":github>muhlba91/renovate-config:automerge(digest)",
+    ":github>muhlba91/renovate-config:automerge(pin)"
+  ],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "configMigration": true,
+  "assignAutomerge": true,
+  "automergeStrategy": "rebase",
+  "automergeType": "pr",
+  "platformAutomerge": true,
+  "baseBranchPatterns": [
+    "main"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "patch",
+        "digest"
+      ],
+      "labels": [
+        "dependencies",
+        "renovate-patch"
+      ]
+    },
+    {
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "labels": [
+        "dependencies",
+        "renovate-minor"
+      ]
+    },
+    {
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "labels": [
+        "dependencies",
+        "renovate-major"
+      ]
+    }
+  ],
+  "enabledManagers": [
+    "github-actions",
+    "pre-commit"
+  ],
+  "github-actions": {
+    "managerFilePatterns": [
+      "/^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$/",
+      "/(^|/)action\\.ya?ml$/"
+    ]
+  },
+  "pre-commit": {
+    "enabled": true,
+    "managerFilePatterns": [
+      "/(^|/)\\.pre-commit-config\\.ya?ml$/"
+    ]
+  }
+}
