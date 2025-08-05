@@ -70,9 +70,7 @@
       "labels": [
         "dependencies",
         "renovate-github-actions"
-      ],
-      "groupName": "all github-actions updates",
-      "groupSlug": "renovate-github-actions"
+      ]
     }
   ]
 }
