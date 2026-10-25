@@ -10,6 +10,17 @@
         "renovate-{{arg0}}"
       ],
       "automerge": true
+    },
+    {
+      "description": "never automerge python minor/major updates (mise, pyproject, Docker images): wheels lag behind new minors, constraints and local .venvs need a manual check",
+      "matchDepNames": [
+        "python"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "major"
+      ],
+      "automerge": false
     }
   ]
 }
