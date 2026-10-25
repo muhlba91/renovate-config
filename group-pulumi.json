@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "description": "Bump the Pulumi CLI and core SDK together",
+      "matchDepNames": [
+        "pulumi",
+        "github.com/pulumi/pulumi/sdk/v3",
+        "@pulumi/pulumi"
+      ],
+      "groupName": "pulumi"
+    }
+  ]
+}

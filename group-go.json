@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "description": "Bump Go in mise.toml and go.mod together",
+      "matchManagers": [
+        "mise",
+        "gomod"
+      ],
+      "matchDepNames": [
+        "go"
+      ],
+      "groupName": "go"
+    },
+    {
+      "description": "Bump the go directive instead of keeping it as a minimum",
+      "matchManagers": [
+        "gomod"
+      ],
+      "matchDepTypes": [
+        "golang"
+      ],
+      "rangeStrategy": "bump"
+    }
+  ]
+}
