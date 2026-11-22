@@ -13,6 +13,7 @@
     ":label(dependencies)",
     "group:monorepos",
     "group:githubArtifactActions",
+    ":enablePreCommit",
     "github>muhlba91/renovate-config:automerge(digest)"
   ],
   "assignAutomerge": true,
