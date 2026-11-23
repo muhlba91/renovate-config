@@ -1,7 +1,7 @@
 # gitStream Configuration
 
 [![License](https://img.shields.io/github/license/muhlba91/renovate-config?style=for-the-badge)](LICENSE.md)
-[![](https://api.scorecard.dev/projects/github.com/muhlba91/renovate-config/badge?style=for-the-badge)](https://scorecard.dev/viewer/?uri=github.com/muhlba91/renovate-config)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/muhlba91/renovate-config/badge?style=for-the-badge)](https://scorecard.dev/viewer/?uri=github.com/muhlba91/renovate-config)
 
 This repository contains the global configuration for [Renovate](https://renovatebot.com).
 

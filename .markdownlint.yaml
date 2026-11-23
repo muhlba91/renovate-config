@@ -1,0 +1,3 @@
+default: true
+# Paragraphs are one line each (DOC-06).
+MD013: false
